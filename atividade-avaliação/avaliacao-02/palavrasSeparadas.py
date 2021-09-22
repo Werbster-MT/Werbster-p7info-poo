@@ -39,4 +39,5 @@ def separar():
             print('Maior palavra: {}'.format(maiorPalavra))
             break
         cont += 1
+        
 separar()
