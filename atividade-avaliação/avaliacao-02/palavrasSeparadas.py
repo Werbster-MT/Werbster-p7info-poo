@@ -1,7 +1,19 @@
+def linhaTracejada():
+    print('-' * 103)
+
+def tabela(lista):
+    linhaTracejada()
+    print('|{:^50s}|{:^50s}|'.format('Exemplo de Entrada', 'Exemplo de Saída'))
+    linhaTracejada()
+    for i in range(0, len(lista) - 1):
+        print('|{:^50s}|{:^50s}|'.format(lista[i][0], lista[i][1]))
+    linhaTracejada()
+
 def separar():
     maiorPalavra = ''
     maiorPalavraFrase = ''
     cont = 0
+    linha = []
     while True:
         maiorNum = 0
         seq = ''
@@ -13,15 +25,17 @@ def separar():
                 maiorPalavraFrase = x
             seq = seq + '{}-'.format(len(x))
         seq = seq[:-1]
-        print(seq)
-        sair = str(input('Pressione qualquer tecla para continuar ou 0 para sair!'))
+
         if cont == 0:
-            aux = maiorPalavraFrase
-            if len(aux) > len(maiorPalavra):
-                maiorPalavra = maiorPalavraFrase
+            maiorPalavra = maiorPalavraFrase
+
         if len(maiorPalavraFrase) >= len(maiorPalavra):
             maiorPalavra = maiorPalavraFrase
-        if sair == '0':
+
+        linha.append([frase, seq])
+
+        if frase == '0':
+            tabela(linha)
             print('Maior palavra: {}'.format(maiorPalavra))
             break
         cont += 1
