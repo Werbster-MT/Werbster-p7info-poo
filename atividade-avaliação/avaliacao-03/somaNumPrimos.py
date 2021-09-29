@@ -22,5 +22,6 @@ def somaPrimos(n):
         cont += 1
 
 somaPrimos(3)
+somaPrimos(5)
 somaPrimos(7)
 somaPrimos(100)

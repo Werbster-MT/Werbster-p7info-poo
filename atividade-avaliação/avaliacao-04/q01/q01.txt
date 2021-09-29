@@ -1,0 +1,11 @@
+1)
+(c) - Encapsulamento
+(h) - Mensagem
+(i) - Herança
+(a) - Polimorfismo
+(g) - Dependência
+(f) - Lista
+(b) - Classe
+(e) - Objeto
+(j) - Composição
+(d) - Array
