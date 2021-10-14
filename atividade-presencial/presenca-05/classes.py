@@ -1,40 +1,43 @@
+# Sistema Para venda de produtos e armazenamento de alguns dados de cada cliente
+
 class Cliente:
+
+    # Atributos
     def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
-        self.enderecos = []
+        self.__endereco = None
+    # Metodos
 
-    def insereEndereco(self, cidade, estado):
-        self.enderecos.append(Endereco(cidade, estado))
+    def get_endereco(self):
+        return self.__endereco
 
-    def listaEnderecos(self):
-        for endereco in self.enderecos:
-            print(endereco.cidade, endereco.estado)
+    def set_endereco(self, endereco):
+        self.__endereco = endereco
 
-    def __del__(self):
-        print('{} foi apagado!'.format(self.nome))
 
 class Endereco:
+    # Atributos
     def __init__(self, cidade, estado):
         self.cidade = cidade
         self.estado = estado
 
-    def __del__(self):
-        print('{}/{} foi apagado!'.format(self.cidade, self.estado))
 
 class CarinhoDeCompras:
+    # Atributo
     def __init__(self):
         self.produtos = []
+    # Metodo
 
-    def inserirProduto(self, produto):
+    def inserirproduto(self, produto):
         if isinstance(produto, Produto):
             self.produtos.append(produto)
 
-    def listaProdutos(self):
+    def listaprodutos(self):
         for produto in self.produtos:
             print(produto.nome, produto.valor)
 
-    def somaTotal(self):
+    def somatotal(self):
         total = 0
         for produto in self.produtos:
             total += produto.valor
@@ -42,7 +45,7 @@ class CarinhoDeCompras:
         return total
 
 class Produto:
+    # Atributo
     def __init__(self, nome, valor):
         self.nome = nome
         self.valor = valor
-
