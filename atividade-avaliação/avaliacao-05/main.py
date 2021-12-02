@@ -24,11 +24,8 @@ def main():
     nf = NotaFiscal(1, 100, cli)
 
     nf.adicionarItem(it1)
-
     nf.adicionarItem(it2)
-
     nf.adicionarItem(it3)
-
     nf.calcularNotaFiscal()
 
     print("Valor Nota Fiscal= " + str(nf.valorNota))
