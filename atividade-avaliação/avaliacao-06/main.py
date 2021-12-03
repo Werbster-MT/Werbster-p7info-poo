@@ -1,10 +1,10 @@
 """
   Módulo main - instancia objetos de classes definidas em
-                módulos do pacote projeto01.   
+                módulos do pacote projeto01.
 """
 from produto import Produto
-from cliente import Cliente
-from notafiscal import NotaFiscal
+from cliente        import Cliente
+from notafiscal     import NotaFiscal
 from itemnotafiscal import ItemNotaFiscal
 from DB import db
 
@@ -54,7 +54,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
